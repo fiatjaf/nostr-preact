@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "name": "nostr-client",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "preact build",
+    "serve": "sirv build --port 8080 --cors --single",
+    "dev": "preact watch",
+    "lint": "eslint src",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "preact",
+    "ignorePatterns": [
+      "build/"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-exponentiation-operator": "^7.12.1",
+    "buffer": "^6.0.3",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-preact-pure": "^2.0.0",
+    "eslint": "^6.0.1",
+    "eslint-config-preact": "^1.1.0",
+    "jest": "^24.9.0",
+    "jest-preset-preact": "^1.0.0",
+    "node-sass": "^5.0.0",
+    "preact-cli": "^3.0.0",
+    "sass-loader": "^10.1.1",
+    "sirv-cli": "1.0.3"
+  },
+  "dependencies": {
+    "bulma": "^0.9.2",
+    "dexie": "^3.0.3",
+    "insort": "^0.4.0",
+    "nostr-tools": "^0.3.0",
+    "preact": "^10.3.2",
+    "preact-render-to-string": "^5.1.4",
+    "preact-router": "^3.2.1",
+    "pretty-date": "^0.2.0",
+    "quick-lru": "^6.0.0"
+  },
+  "jest": {
+    "preset": "jest-preset-preact",
+    "setupFiles": [
+      "<rootDir>/tests/__mocks__/browserMocks.js",
+      "<rootDir>/tests/__mocks__/setupTests.js"
+    ]
+  }
+}

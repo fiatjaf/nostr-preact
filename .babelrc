@@ -1,0 +1,9 @@
+const Buffer = require('buffer/').Buffer
+
+module.exports = {
+  resolve: {
+    alias: {
+      { "Buffer":  Buffer}
+    }
+  }
+};

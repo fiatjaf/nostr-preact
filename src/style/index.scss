@@ -1,0 +1,88 @@
+/* @import "./core.css"; */
+#app {
+  min-height: 100vh;
+}
+
+.navbar > .is-fluid {
+  padding-left: 0;
+}
+
+.user-image > img {
+  max-height: 42px;
+  max-width: 42px;
+}
+
+.home-grid {
+	display: grid;
+  padding-top: 1rem;
+  grid-template-areas:
+    "header"
+    "article"
+    "nav"
+    "footer";
+  grid-template-rows: auto 1fr 100% 100%;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  margin: 0;
+}
+
+.home-grid > #publish,
+#footer,
+#posts,
+#nav {
+  padding: 1.2em;
+}
+#publish {
+  grid-area: header;
+}
+#footer {
+  grid-area: footer;
+}
+#posts {
+  grid-area: article;
+}
+#nav {
+  grid-area: nav;
+}
+
+@media all and (min-width: 575px) {
+  .home-grid {
+    grid-template-areas:
+      "nav header header"
+      "nav article article"
+      "nav footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 20% 1fr 15%;
+  }
+}
+
+.publish {
+  width: 100%;
+  
+  & textarea {
+    position: relative;
+    border: none;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: 1.5rem;
+    &:focus{
+      box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+    }
+  }
+  & small {
+    font-size: 0.6rem;
+  }
+}
+
+#posts > .card {
+	margin-bottom: 2rem;
+}
+
+.card-action {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  border-top: none;
+}
